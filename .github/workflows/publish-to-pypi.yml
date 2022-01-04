@@ -5,7 +5,6 @@ on:
     tags:
       - '*'
 
-
 jobs:
   build-n-publish:
     name: Build and publish to PyPI
