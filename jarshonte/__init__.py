@@ -1,10 +1,9 @@
-from setuptools_scm import get_version
 import click
 
+from ._version import version
 
-my_version = get_version()
 
 @click.command()
 def main():
     click.echo('Hello world!')
-    click.echo(f'This is version {my_version}.')
+    click.echo(f'This is version {version}.')
