@@ -22,7 +22,7 @@ jobs:
     #     versiontag
     #     --user
     - name: Tell us the tag history
-      run: git tag
+      run: echo foobar
     - name: Install pypa/build
       run: >-
         python -m
