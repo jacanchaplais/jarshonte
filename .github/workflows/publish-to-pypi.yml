@@ -8,12 +8,19 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
-    - name: Fetch tag and branch history
-      run: git fetch --prune --unshallow
+      with: { fetch-depth: 0 }
+    # - name: Fetch tag and branch history
+    #   run: git fetch --prune --unshallow
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+    # - name: Install scm version
+    #   run: >-
+    #     python -m
+    #     pip install
+    #     versiontag
+    #     --user
     - name: Install pypa/build
       run: >-
         python -m
